@@ -1,16 +1,3 @@
-// Fetch Hello World message
-function fetchHelloWorld() {
-    fetch('/getHelloWorld')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('result').innerText = `✅ ${data.message}`;
-        })
-        .catch(error => {
-            console.error('Error fetching Hello World:', error);
-            document.getElementById('result').innerText = '❌ Error fetching Hello World!';
-        });
-}
-
 // Fetch random cat picture
 function fetchCatPicture() {
     fetch('/getCatPicture')

@@ -18,11 +18,6 @@ if not os.path.exists(UPLOAD_FOLDER):
 def index():
     return render_template('index.html')
 
-# Define a route for Hello World API
-@app.route('/getHelloWorld', methods=['GET'])
-def hello_world():
-    return jsonify(message='Hello, World!')
-
 # Route to fetch a random cat picture
 @app.route('/getCatPicture', methods=['GET'])
 def get_cat_picture():
