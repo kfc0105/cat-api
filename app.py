@@ -1,9 +1,11 @@
 import os
 import random
 from flask import Flask, render_template, jsonify, request, send_from_directory
+from flask_cors import CORS
 
 # Create a Flask application
 app = Flask(__name__)
+CORS(app)
 
 # Directory for uploaded cat pictures
 UPLOAD_FOLDER = 'uploads'
