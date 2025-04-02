@@ -15,11 +15,6 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
-# Define a route for the root URL to render the HTML
-@app.route('/')
-def index():
-    return render_template('index.html')
-
 # Route to fetch a random cat picture
 @app.route('/getCatPicture', methods=['GET'])
 def get_cat_picture():
